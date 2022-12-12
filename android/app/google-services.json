@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "856273709528",
+    "project_id": "cyber-app-e7821",
+    "storage_bucket": "cyber-app-e7821.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856273709528:android:10d594e676b4f0a658eaad",
+        "android_client_info": {
+          "package_name": "com.cyberapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "856273709528-ekia66jaiabbkjk2qndatq8ibj0o4rcd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPAPpzEqoBM0o5eBn9DCRXDNBF_Ck7ghs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "856273709528-ekia66jaiabbkjk2qndatq8ibj0o4rcd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

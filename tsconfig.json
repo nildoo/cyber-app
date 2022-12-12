@@ -1,0 +1,15 @@
+{
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "types": ["styled-components-react-native", "node"],
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin",
+        "lint": {
+          "validProperties": ["padding-horizontal", "padding-vertical"]
+        }
+      }
+    ]
+  }
+}

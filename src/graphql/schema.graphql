@@ -1,0 +1,185 @@
+mutation ClientLogin($input: SignInServiceClientInput!) {
+  clientLogin(input: $input) {
+    token
+  }
+}
+
+query ClientMe {
+  clientMe {
+    _id
+    cnpj
+    whatsapp
+    contractType {
+      title
+      type
+    }
+      othersContracts {
+      extra_art
+      extra_network
+      landing_page
+      site_development
+      site_maintenance
+    }
+    email
+    name
+   networks {
+      name
+        lastUpdate
+      insights {
+        comments
+        commentsHistory {
+          date
+          quantity
+        }
+        followers
+        followersHistory {
+          date
+          quantity
+        }
+        likes
+        likesHistory {
+          date
+          quantity
+        }
+        reached
+        reachedHistory {
+          date
+          quantity
+        }
+        posts
+        postsHistory {
+          date
+          quantity
+        }
+        profileViews
+        profileViewsHistory {
+          date
+          quantity
+        }
+      }
+    }
+  }
+}
+
+query DataHistories($input: HistoryInput!) {
+  dataHistories(input: $input) {
+    networkType
+    week
+    year
+  }
+}
+
+query GetAllCampaings {
+  getAllCampaings {
+    _id
+    client {
+      name
+    }
+    title
+    type
+    status
+    startDate
+    endDate
+    socialMediasResults {
+      name
+    }
+  }
+}
+
+query GetCampaingByClient($client: String!) {
+  getCampaingByClient(client: $client) {
+    _id
+    title
+    type
+    status
+    startDate
+    endDate
+      client {
+      _id
+      name
+      email
+    }
+     consultant {
+      office
+      email
+      name
+      _id
+    }
+    files {
+      images {
+        url
+        thumb
+        title
+        approved
+      }
+      videos {
+        url
+        thumb
+        title
+        approved
+      }
+      signature {
+        url
+        thumb
+        title
+        approved
+      }
+    }
+}
+}
+
+query GetCampaingById($getCampaingByIdId: String!) {
+  getCampaingById(id: $getCampaingByIdId) {
+   _id
+    client {
+      _id
+    }
+    links {
+      link
+      title
+    }
+    meet {
+      date
+      hour
+      title
+    }
+    socialMediasResults {
+      name
+      adResults {
+        _id
+        amountSpent
+        reach
+        costPerResults {
+          title
+          value
+        },
+        results {
+          title
+          value
+        }
+      }
+    }
+  }
+}
+
+mutation AddFilesToCampaing($input: AddFileCampaingInput!) {
+  addFilesToCampaing(input: $input) {
+    files {
+      signature {
+        url
+        thumb
+        title
+        approved
+        folder
+        firebasePath
+      }
+    }
+  }
+}
+
+
+mutation AddNotificationIdClient($input: SetNotificationIdInput!) {
+  addNotificationIdClient(input: $input) {
+    notificationId
+  }
+}
